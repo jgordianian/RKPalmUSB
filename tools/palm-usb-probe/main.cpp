@@ -308,7 +308,7 @@ int CommandHandshake() {
     for (const auto& request : requests) {
         BYTE buffer[256] = {};
         WINUSB_SETUP_PACKET setup = {};
-        setup.RequestType = 0xC2;  // device-to-host, vendor, device
+        setup.RequestType = 0xC2;  // device-to-host, vendor, interface
         setup.Request = request.request;
         setup.Length = sizeof(buffer);
 

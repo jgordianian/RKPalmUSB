@@ -103,7 +103,7 @@ bool DiscoverEndpointsFromDescriptor(PalmPort& port) {
 bool RefineEndpointsFromDevice(PalmPort& port) {
     PalmExtConnectionInfo info = {};
     WINUSB_SETUP_PACKET setup = {};
-    setup.RequestType = 0xC2;  // device-to-host, vendor, device
+    setup.RequestType = 0xC2;  // device-to-host, vendor, interface
     setup.Request = kRequestGetExtConnectionInfo;
     setup.Length = sizeof(info);
 
